@@ -25,5 +25,5 @@ runs:
       if: steps.cache.outputs.cache-hit != 'true' || inputs.data != 'true'
       run: |
         npm ci
-        echo "cache=${{ inputs.data }}" >> $GITHUB_OUTPUT
+        echo "cache='${{ inputs.data }}'" >> $GITHUB_OUTPUT
       shell: bash
